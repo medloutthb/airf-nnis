@@ -10,8 +10,8 @@ fake = Faker()
 
 # Predefined dict of existing users
 users = {
-    "1234567890": {"date_naissance": "1995-08-25", "genre": "male"},
-    "9876543210": {"date_naissance": "2000-01-10", "genre": "female"},
+    "1234567890": {"date_naissance": "1995-08-25", "sexe": "M"},
+    "9876543210": {"date_naissance": "2000-01-10", "sexe": "F"},
 }
 
 
