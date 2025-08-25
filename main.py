@@ -14,6 +14,7 @@ users = {
     "5842881428": {"date_naissance": "2000-01-10", "sexe": "F"},
 }
 
+undefined_users = ["2116680748", "6879372406", "1411725973"]
 
 @app.get("/personne/{nni}")
 def get_user_by_nni(nni: str):
@@ -23,7 +24,8 @@ def get_user_by_nni(nni: str):
     # If exists in dict → return it
     if nni in users:
         return {"nni": nni, **users[nni]}
-
+    if nni in undefined_users:
+        raise HTTPException(status_code=404, detail="nni not exist")
     # Otherwise → generate fake data
     return {
         "nni": nni,
