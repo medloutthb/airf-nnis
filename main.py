@@ -28,5 +28,5 @@ def get_user_by_nni(nni: str):
     return {
         "nni": nni,
         "date_naissance": fake.date_of_birth(minimum_age=18, maximum_age=80).strftime("%Y-%m-%d"),
-        "genre": fake.random_element(elements=["male", "female"])
+        "genre": fake.random_element(elements=["M", "F"])
     }
